@@ -18,6 +18,15 @@
               </router-link>
             </div>
           </div>
+          <div class="column is-12">
+            <div class="tool-card content coming-soon">
+              <p>
+                More tools will be added as I need them. If you want to request
+                a tool, tweet at me,
+                <a href="https://twitter.com/0NEGUYY">@0NEGUYY</a> .
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -77,11 +86,34 @@ export default {
           iconClasses: "fas fa-user-secret",
         },
         {
+          name: "QR Code Generator",
+          description:
+            "A decently customizable QR code generator with support for custom logos.",
+          route: "/tools/vue",
+          brandColor: "qr",
+          iconClasses: "fas fa-qrcode",
+        },
+        {
           name: "CSV Parsing",
+          description:
+            "For when you just need to convert the damn CSV into JSON already.",
+          route: "/tools/vue",
+          brandColor: "csv",
+          iconClasses: "fas fa-file-csv",
+        },
+        {
+          name: "Design Resources",
           description: "Random code snippets I've found useful over the years.",
           route: "/tools/vue",
           brandColor: "general",
-          iconClasses: "fas fa-file-csv",
+          iconClasses: "fas fa-palette",
+        },
+        {
+          name: "Design Resources",
+          description: "Random code snippets I've found useful over the years.",
+          route: "/tools/vue",
+          brandColor: "general",
+          iconClasses: "fas fa-palette",
         },
       ],
     };
@@ -94,7 +126,7 @@ export default {
   margin-top: 5rem;
 }
 .tool-card {
-  background: rgb(51, 98, 199);
+  background: rgb(70, 104, 143);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0px 0.6px rgba(0, 0, 0, 0.02), 0 0px 1.3px rgba(0, 0, 0, 0.028),
@@ -118,6 +150,15 @@ export default {
   }
   &.ipsum {
     background: #a6b841;
+  }
+  &.csv {
+    background: rgb(51, 98, 199);
+  }
+  &.qr {
+    background: rgb(51, 157, 199);
+  }
+  &.coming-soon {
+    background: rgb(223, 240, 255);
   }
   .button {
     opacity: 0.75;
