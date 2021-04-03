@@ -3,7 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import Buefy from "buefy";
+import VueMeta from "vue-meta";
 
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true,
+});
 Vue.config.productionTip = false;
 Vue.use(Buefy);
 

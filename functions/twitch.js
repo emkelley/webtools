@@ -3,9 +3,10 @@ const axios = require("axios");
 
 exports.handler = async (event, context, callback) => {
   const { query } = event.queryStringParameters;
+
   if (!query)
     return callback(null, {
-      statusCode: 400,
+      statusCode: 418,
     });
 
   const opts = {
@@ -28,7 +29,7 @@ exports.handler = async (event, context, callback) => {
   } else {
     endpoint = `https://api.twitch.tv/helix/users?login=${query}`;
   }
-  console.log(endpoint);
+
   const {
     data: { data },
   } = await axios.get(endpoint, {
@@ -37,6 +38,7 @@ exports.handler = async (event, context, callback) => {
       Authorization: `Bearer ${access_token}`,
     },
   });
+
   if (Number(query)) {
     callback(null, {
       statusCode: 200,

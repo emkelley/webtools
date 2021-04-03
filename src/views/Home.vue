@@ -4,14 +4,17 @@
       <div class="container">
         <div class="columns is-multiline">
           <div v-for="(tool, index) in tools" :key="index" class="column is-4">
-            <div class="tool-card content">
-              <h2 class="subtitle">{{ tool.name }}</h2>
+            <div class="tool-card content" :class="tool.brandColor">
+              <h2 class="subtitle">
+                <i :class="tool.iconClasses" style="margin-right: .25rem"></i>
+                {{ tool.name }}
+              </h2>
               <p class="description">{{ tool.description }}</p>
               <router-link
                 :to="tool.route"
                 class="button is-link is-light is-small"
               >
-                Open Tool
+                Open Resource
               </router-link>
             </div>
           </div>
@@ -37,8 +40,48 @@ export default {
         // },
         {
           name: "Twitch Utilities",
-          description: "Various tools to aid in extension and bot development.",
+          description:
+            "Various tools, resources, and utilities to aid in extension and bot development.",
           route: "/tools/twitch",
+          brandColor: "twitch",
+          iconClasses: "fab fa-twitch",
+        },
+        {
+          name: "Netlify Functions",
+          description: "Random code snippets I've found useful over the years.",
+          route: "/tools/netlify",
+          brandColor: "netlify",
+          iconClasses: "fak fa-netlify",
+        },
+        {
+          name: "Vue Snippets",
+          description: "Random code snippets I've found useful over the years.",
+          route: "/tools/vue",
+          brandColor: "vue",
+          iconClasses: "fab fa-vuejs",
+        },
+        {
+          name: "Fake Data Generator",
+          description:
+            "Generate wide variety of realistic fake data: address, avatars, names, phones, etc.",
+          route: "/tools/fakedata",
+          brandColor: "fakedata",
+          iconClasses: "fas fa-user-secret",
+        },
+        {
+          name: " Ipsum Generator",
+          description:
+            "Generate Ipsum of various styles for any specified length.",
+          route: "/tools/ipsum",
+          brandColor: "ipsum",
+          iconClasses: "fas fa-user-secret",
+        },
+        {
+          name: "CSV Parsing",
+          description: "Random code snippets I've found useful over the years.",
+          route: "/tools/vue",
+          brandColor: "general",
+          iconClasses: "fas fa-file-csv",
         },
       ],
     };
@@ -51,11 +94,39 @@ export default {
   margin-top: 5rem;
 }
 .tool-card {
-  background: darken($color: #002b3f, $amount: 3);
+  background: rgb(51, 98, 199);
   padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0px 0.6px rgba(0, 0, 0, 0.02), 0 0px 1.3px rgba(0, 0, 0, 0.028),
+    0 0px 2.5px rgba(0, 0, 0, 0.035), 0 0px 4.5px rgba(0, 0, 0, 0.042),
+    0 0px 8.4px rgba(0, 0, 0, 0.05), 0 0px 20px rgba(0, 0, 0, 0.07);
   .subtitle,
   .description {
     color: white;
+  }
+  &.twitch {
+    background: #6441a5;
+  }
+  &.netlify {
+    background: #15847d;
+  }
+  &.vue {
+    background: #41b883;
+  }
+  &.fakedata {
+    background: #b86741;
+  }
+  &.ipsum {
+    background: #a6b841;
+  }
+  .button {
+    opacity: 0.75;
+    border-radius: 4px;
+    transition: all 350ms ease-in-out;
+    &:hover {
+      opacity: 1;
+      border-radius: 40px;
+    }
   }
 }
 </style>

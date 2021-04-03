@@ -117,6 +117,10 @@
 <script>
 import axios from "axios";
 export default {
+  metaInfo: {
+    title: "Twitch Tools",
+    titleTemplate: "%s | emk.dev",
+  },
   data() {
     return {
       loading: false,
