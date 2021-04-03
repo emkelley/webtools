@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div class="hero is-primary">
+    <div class="hero is-secondary is-bold">
       <div class="hero-body">
         <div class="container has-text-centered">
           <div class="columns is-centered">
             <div class="column is-6">
               <h1 class="title">Eric's Web Tools</h1>
-              <p>
+              <p style="color: ghostwhite">
                 A collection of browser-based tools and utilities to help aid in
                 web development.
               </p>
@@ -24,11 +24,10 @@
   font-family: "Inter", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  background: darken($color: #002b3f, $amount: 7);
+  color: #000e1d;
+  background: #dfecfa;
   min-height: 100vh;
 }
-// Import Bulma's core
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
@@ -36,7 +35,10 @@
 $primary: #002b3f;
 $primary-light: findLightColor($primary);
 $primary-dark: findDarkColor($primary);
-$primary-invert: findColorInvert($primary);
+$secondary: rgb(16, 128, 156);
+$secondary-light: findLightColor($secondary);
+$secondary-dark: findDarkColor($secondary);
+$secondary-invert: findColorInvert($secondary);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
 
@@ -68,6 +70,12 @@ $colors: mergeColorMaps(
       $primary-invert,
       $primary-light,
       $primary-dark,
+    ),
+    "secondary": (
+      $secondary,
+      $secondary-invert,
+      $secondary-light,
+      $secondary-dark,
     ),
     "link": (
       $link,
@@ -114,6 +122,6 @@ $label-color: ghostwhite;
 .title,
 .subtitle,
 p {
-  color: ghostwhite;
+  color: rgb(0, 0, 22);
 }
 </style>
