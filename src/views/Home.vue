@@ -42,11 +42,12 @@ export default {
   data() {
     return {
       tools: [
-        // {
-        //   name: "B64 Encode Image",
-        //   description: "Upload an image to be converted to Base-64 format.",
-        //   route: "/tools/b64",
-        // },
+        {
+          name: "B64 Encode Image",
+          description: "Upload an image to be converted to Base-64 format.",
+          route: "/tools/b64",
+          iconClasses: "fas fa-terminal",
+        },
         {
           name: "Twitch Utilities",
           description:
