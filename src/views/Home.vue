@@ -12,7 +12,7 @@
               <p class="description">{{ tool.description }}</p>
               <router-link
                 :to="tool.route"
-                class="button is-link is-light is-small"
+                class="button is-link is-primary is-small"
               >
                 Open Resource
               </router-link>
@@ -46,6 +46,7 @@ export default {
           name: "B64 Encode Image",
           description: "Upload an image to be converted to Base-64 format.",
           route: "/tools/b64",
+          brandColor: "b64",
           iconClasses: "fas fa-terminal",
         },
         {
@@ -62,6 +63,14 @@ export default {
           route: "/tools/netlify",
           brandColor: "netlify",
           iconClasses: "fak fa-netlify",
+        },
+        {
+          name: "YouTube Utilities",
+          description:
+            "Various tools, resources, utilities for various YouTube related things.",
+          route: "/tools/youtube",
+          brandColor: "youtube",
+          iconClasses: "fab fa-youtube",
         },
         {
           name: "Vue Snippets",
@@ -84,13 +93,13 @@ export default {
             "Generate Ipsum of various styles for any specified length.",
           route: "/tools/ipsum",
           brandColor: "ipsum",
-          iconClasses: "fas fa-user-secret",
+          iconClasses: "fas fa-university",
         },
         {
           name: "QR Code Generator",
           description:
             "A decently customizable QR code generator with support for custom logos.",
-          route: "/tools/vue",
+          route: "/tools/qr",
           brandColor: "qr",
           iconClasses: "fas fa-qrcode",
         },
@@ -101,20 +110,6 @@ export default {
           route: "/tools/vue",
           brandColor: "csv",
           iconClasses: "fas fa-file-csv",
-        },
-        {
-          name: "Design Resources",
-          description: "Random code snippets I've found useful over the years.",
-          route: "/tools/vue",
-          brandColor: "general",
-          iconClasses: "fas fa-palette",
-        },
-        {
-          name: "Design Resources",
-          description: "Random code snippets I've found useful over the years.",
-          route: "/tools/vue",
-          brandColor: "general",
-          iconClasses: "fas fa-palette",
         },
       ],
     };
@@ -127,39 +122,45 @@ export default {
   margin-top: 5rem;
 }
 .tool-card {
-  background: rgb(70, 104, 143);
+  border: 2px solid rgb(70, 104, 143);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 0px 0.6px rgba(0, 0, 0, 0.02), 0 0px 1.3px rgba(0, 0, 0, 0.028),
     0 0px 2.5px rgba(0, 0, 0, 0.035), 0 0px 4.5px rgba(0, 0, 0, 0.042),
     0 0px 8.4px rgba(0, 0, 0, 0.05), 0 0px 20px rgba(0, 0, 0, 0.07);
   .subtitle,
   .description {
-    color: white;
+    color: rgb(38, 36, 78);
   }
   &.twitch {
-    background: #6441a5;
+    border-color: rgb(100, 65, 165);
   }
   &.netlify {
-    background: #15847d;
+    border-color: rgb(21, 132, 125);
   }
   &.vue {
-    background: #41b883;
+    border-color: rgb(65, 184, 131);
   }
   &.fakedata {
-    background: #b86741;
+    border-color: rgb(144, 79, 49);
   }
   &.ipsum {
-    background: #a6b841;
+    border-color: rgb(185, 133, 65);
   }
   &.csv {
-    background: rgb(51, 98, 199);
+    border-color: rgb(51, 98, 199);
   }
   &.qr {
-    background: rgb(51, 157, 199);
+    border-color: rgb(51, 157, 199);
+  }
+  &.b64 {
+    border-color: rgb(199, 177, 51);
+  }
+  &.youtube {
+    border-color: rgb(202, 45, 45);
   }
   &.coming-soon {
-    background: rgb(223, 240, 255);
+    border-color: rgb(223, 240, 255);
   }
   .button {
     opacity: 0.75;

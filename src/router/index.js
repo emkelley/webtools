@@ -29,6 +29,18 @@ const routes = [
       import(/* webpackChunkName: "twitch" */ "../views/tools/twitch.vue"),
   },
   {
+    path: "/tools/youtube",
+    name: "YouTube",
+    component: () =>
+      import(/* webpackChunkName: "youtube" */ "../views/tools/youtube.vue"),
+  },
+  {
+    path: "/tools/qr",
+    name: "QR",
+    component: () =>
+      import(/* webpackChunkName: "qr" */ "../views/tools/qr.vue"),
+  },
+  {
     path: "/login",
     name: "Login",
     component: () =>
