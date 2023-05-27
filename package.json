@@ -1,36 +1,25 @@
 {
-  "name": "vue-bulma-firebase-starter",
-  "version": "0.1.0",
-  "private": false,
-  "author": "Eric Kelley <oss@emk.dev>",
+  "name": "nuxt-app",
+  "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "buefy": "^0.9.4",
-    "core-js": "^3.6.5",
-    "firebase": "^8.2.2",
-    "querystring": "^0.2.1",
-    "vue": "^2.6.11",
-    "vue-meta": "^2.4.0",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "@nuxt/devtools": "^0.5.5",
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/tailwindcss": "^6.7.0",
+    "@types/node": "^18",
+    "nuxt": "^3.5.1",
+    "sass": "^1.62.1"
   },
-  "license": "MIT"
+  "dependencies": {
+    "@nuxtjs/google-fonts": "^3.0.1",
+    "axios": "^1.4.0",
+    "daisyui": "^2.51.6",
+    "nuxt-icon": "^0.4.1"
+  }
 }
