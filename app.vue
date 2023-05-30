@@ -6,7 +6,7 @@
   </div>
 </template>
 <script setup lang="ts">
-const theme = "light"; // this could be dynamic, depending on your use case
+const theme = "black"; // this could be dynamic, depending on your use case
 
 useHead(() => ({
   htmlAttrs: {

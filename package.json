@@ -20,6 +20,7 @@
     "@nuxtjs/google-fonts": "^3.0.1",
     "axios": "^1.4.0",
     "daisyui": "^2.51.6",
+    "jimp": "^0.22.8",
     "nuxt-icon": "^0.4.1"
   }
 }
