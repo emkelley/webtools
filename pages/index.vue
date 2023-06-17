@@ -20,14 +20,18 @@
           </nuxt-link>
         </div>
         <div
-          class="p-4 bg-gradient-to-br from-violet-900/70 to-black rounded-lg flex flex-col gap-2"
+          class="p-4 bg-gradient-to-br from-blue-900/70 to-black rounded-lg flex flex-col gap-2"
         >
-          <Icon name="jam:twitch" color="white" class="text-4xl" />
-          <h1 class="text-lg font-bold">Twitch Tools</h1>
+          <Icon
+            name="clarity:color-palette-solid"
+            color="white"
+            class="text-4xl"
+          />
+          <h1 class="text-lg font-bold">Color Tools</h1>
 
           <nuxt-link
             to="/tools/twitch"
-            class="btn bg-violet-900 hover:bg-violet-950 w-full rounded-md"
+            class="btn bg-blue-900 hover:bg-blue-950 w-full rounded-md"
           >
             Open
           </nuxt-link>
