@@ -30,7 +30,7 @@
           <h1 class="text-lg font-bold">Color Tools</h1>
 
           <nuxt-link
-            to="/tools/twitch"
+            to="/tools/colors"
             class="btn bg-blue-900 hover:bg-blue-950 w-full rounded-md"
           >
             Open
